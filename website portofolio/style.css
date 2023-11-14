@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Monserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#hero{
+    background-image: url(./gambar/background1.jpg);
+    background-size: cover;
+    background-posistion: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-colour: rgb(250, 152, 169);
+    opacity: .7;
+    z-index: -1;
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: rgb(155, 222, 243);
+}
+
+.hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(150, 224, 243);
+    background-color: transparent;
+    border: 2px solid rgb(150, 224, 243);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#hero .cta:hover {
+    color: white;
+    background-color: rgb(150, 224, 243);
+}
+
+/* tentang saya */
+#tentangsaya{}
+#tentangsaya .tentangsaya{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#tentangsaya .section-title{
+    font-size: 4rem;
+    font-size: 300;
+    color: rgb(250, 152, 169);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spcing: .2rem;
+    text-align: center;
+}
+
+#tentangsaya .tentangsaya-top p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 200;
+    letter-spacing: .05rem;
+}
+
+
+#tugas{}
+#tugas .tugas{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-size: medium;
+}
+
+#tugas .section-title{
+    font-size: 4rem;
+    font-size: 200;
+    color: rgb(250, 152, 169);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spcing: .2rem;
+    text-align: center;
+}
+
+#tugas .tugas-top p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+#tugas .tugs-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#tugas .tugas-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(gambar/backgroundtugas.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+}
+
+#tugas .tugas-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    z-index: 1;
+}
+
+.tugas .tugas-bottom .icon{
+    height: 80px;
+    width:80px;
+    margin-bottom: 20px;
+}
+
+#tugas .tugas-bottom .icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#button .button-style {
+font-size: 20px;
+background-color: rgb(150, 224, 243);
+color: white;
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: rgb(150, 224, 243);
+        font-weight: 500px;
+    }
+}
+
+p{text-indent: 30px;}
